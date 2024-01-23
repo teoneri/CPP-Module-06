@@ -6,7 +6,7 @@
 /*   By: mneri <mneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:53:50 by mneri             #+#    #+#             */
-/*   Updated: 2024/01/22 15:43:57 by mneri            ###   ########.fr       */
+/*   Updated: 2024/01/23 15:21:28 by mneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,17 @@
 
 ScalarConverter::~ScalarConverter()
 {}
+
+ScalarConverter::ScalarConverter(const ScalarConverter &other)
+{
+	(void)other;
+}
+
+ScalarConverter &ScalarConverter::operator=(const ScalarConverter &other)
+{
+    (void)other;
+    return *this;
+}
 
 void ScalarConverter::convert(char *type)
 {

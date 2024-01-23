@@ -6,11 +6,10 @@
 /*   By: mneri <mneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:46:51 by mneri             #+#    #+#             */
-/*   Updated: 2024/01/22 16:08:38 by mneri            ###   ########.fr       */
+/*   Updated: 2024/01/23 15:19:53 by mneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -33,6 +32,8 @@ private:
 	ScalarConverter();
 public:
 	~ScalarConverter();
+	ScalarConverter(const ScalarConverter &other);
+    ScalarConverter &operator=(const ScalarConverter &other);
 	static void convert(char *type);
 	static int parse_type(char *type);
 	static int check_int(char *type);

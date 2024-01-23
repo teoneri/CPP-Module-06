@@ -6,7 +6,7 @@
 /*   By: mneri <mneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 15:47:07 by mneri             #+#    #+#             */
-/*   Updated: 2024/01/22 16:28:40 by mneri            ###   ########.fr       */
+/*   Updated: 2024/01/23 15:22:39 by mneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,18 @@ uintptr_t Serializer::serialize(Data *ptr)
 Data *Serializer::deserialize(uintptr_t raw)
 {
 	return reinterpret_cast<Data*>(raw);
+}
+
+Serializer::~Serializer()
+{}
+
+Serializer::Serializer(const Serializer &other)
+{
+	(void)other;
+}
+
+Serializer &Serializer::operator=(const Serializer &other)
+{
+    (void)other;
+    return *this;
 }
