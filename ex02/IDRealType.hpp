@@ -6,14 +6,13 @@
 /*   By: mneri <mneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 17:13:13 by mneri             #+#    #+#             */
-/*   Updated: 2024/01/23 14:58:45 by mneri            ###   ########.fr       */
+/*   Updated: 2024/01/23 15:35:33 by mneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <typeinfo>
 
 class Base
 {
@@ -42,6 +41,12 @@ class C : public Base
 		C();
 		~C();
 
+};
+
+class InvalidCastException : public std::exception
+{
+	public:
+		const char* what() const throw();
 };
 
 Base *generate(void);

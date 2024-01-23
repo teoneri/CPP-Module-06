@@ -6,7 +6,7 @@
 /*   By: mneri <mneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 17:13:16 by mneri             #+#    #+#             */
-/*   Updated: 2024/01/23 14:54:59 by mneri            ###   ########.fr       */
+/*   Updated: 2024/01/23 15:44:33 by mneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void identify(Base &p)
 		std::cout << "A class: " << &baseA << std::endl;
 		return ;
 	}
-	catch(std::bad_cast &e)
+	catch(std::exception &e)
 	{
 	}
 	try
@@ -89,7 +89,7 @@ void identify(Base &p)
 		std::cout << "B class: " << &baseB << std::endl;
 		return ;
 	}
-	catch(std::bad_cast &e)
+	catch(std::exception &e)
 	{
 	}
 	try
@@ -98,7 +98,7 @@ void identify(Base &p)
 		std::cout << "C class: " << &baseC << std::endl;
 		return ;
 	}
-	catch(std::bad_cast &e)
+	catch(std::exception &e)
 	{
 	}
 }
